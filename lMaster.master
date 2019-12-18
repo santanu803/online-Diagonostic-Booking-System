@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="lMaster.master.cs" Inherits="lMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #lb{
+            margin-top:8px;
+           
+        }
+        .lb{
+            color:#565454;
+        }
+        .lb:hover{
+            color:red;
+            text-decoration:none;
+        }
+        #lbm{
+            /*margin-top:8px;*/
+        }
+        #lbn{
+            margin-top:8px;
+            padding-right:100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+              <div style="position:sticky;top:0; z-index:100;">
+                     <nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+                 
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mmm">
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mmm">
+                         <ul class="navbar-nav ml-auto">
+                             <li class="nav-item" id="lbm"><a href="index.aspx" class="nav-link">Welcome! </a></li>
+                             <li class="nav-item" id="lbn"><asp:Label ID="llblAname" runat="server" Text=""></asp:Label></li>
+                             <li class="nav-item active"><a href="labHome.aspx" class="nav-link">Home</a></li>
+                             <li class="nav-item dropdown"><a href="Default.aspx/#" class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Test</a>
+
+                                 <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                     <a class="dropdown-item" href="rI.aspx">All Test</a>
+                         
+                                      <a class="dropdown-item" href="fundedp.aspx">Update Test Details</a>
+                                      <a class="dropdown-item" href="addTest.aspx">Add New Test</a>
+                          
+                                </div>
+               
+                            </li>
+                             <li class="nav-item"><a href="dataBases.aspx" class="nav-link">Contact</a></li>
+                             <li class="nav-item" id="lb"><asp:LinkButton ID="LinkButton1" runat="server" CssClass="lb" OnClick="LinkButton1_Click" CausesValidation="False">Log out</asp:LinkButton></li>
+               
+               
+                             
+
+                        </ul>
+                    </div>
+
+
+
+
+
+                </nav>
+
+            </div>
+
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
